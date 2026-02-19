@@ -72,3 +72,24 @@ void setup() {
  * - Otherwise sets servo to 0°.
  * - Prints distance on Serial Monitor.
  */
+void loop() {
+
+  // Send trigger pulse
+  digitalWrite(trg_pin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trg_pin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trg_pin, LOW);
+
+  // Measure echo duration
+  long duration = pulseIn(ech_pin, HIGH);
+
+  // Calculate distance (cm)
+  float distance = duration * (0.0343 / 2);
+
+  // Control servo based on distance threshold
+  if (distance <= 15) {
+    myservo.write(180);
+  } else {
+    myservo.write(0);
+  }
