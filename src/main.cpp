@@ -93,3 +93,10 @@ void loop() {
   } else {
     myservo.write(0);
   }
+ // Print distance to Serial Monitor
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  delay(10);
+}
