@@ -45,3 +45,11 @@ int trg_pin = 9;
 
 /** @brief Ultrasonic echo pin */
 int ech_pin = 10;
+/**
+ * @brief System initialization routine.
+ *
+ * Initializes:
+ * - Ultrasonic sensor pins
+ * - Servo motor attachment
+ * - Serial communication (9600 baud)
+ */
