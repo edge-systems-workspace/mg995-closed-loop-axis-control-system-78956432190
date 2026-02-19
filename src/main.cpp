@@ -2,7 +2,7 @@
  * @file Ultrasonic_Servo_Control.ino
  * @version 1.0
  * @date 19 Feb 2026
- * @author Khushi Singh
+ * @author Khushi Singh 
  *
  * @brief Object detection and servo control using Ultrasonic Sensor (HC-SR04).
  *
